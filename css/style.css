@@ -411,6 +411,11 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   display: flex;
   flex-direction: column;
   gap: 14px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.value:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 .value.highlight {
   background: var(--brand-red);
@@ -446,6 +451,11 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 .program-card.flagship {
   background: var(--brand-blue);
@@ -495,6 +505,11 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   display: block;
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.gallery-item:hover img {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 .gallery-item figcaption {
   margin-top: 12px;
@@ -557,6 +572,11 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.involve-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 .involve-card h3 { font-size: 20px; }
 .involve-card p {
