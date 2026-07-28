@@ -138,13 +138,18 @@ nav {
 }
 .brand {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   font-family: 'Bricolage', sans-serif;
   font-weight: 800;
   font-size: 20px;
   color: var(--brand-blue);
   text-decoration: none;
+}
+.brand-icon {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 .brand small {
   font-family: 'Plex Mono', monospace;
@@ -169,6 +174,7 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-soft);
+  white-space: nowrap;
   transition: color .15s ease;
 }
 .navlinks a:hover { color: var(--brand-blue); }
@@ -435,19 +441,55 @@ section > .wrap > .section-head { margin-bottom: 52px; }
 .section-head .eyebrow { color: var(--brand-red-deep); }
 .section-head h2 { font-size: clamp(30px, 3.4vw, 42px); }
 
-/* ---------- Mission ---------- */
-.mission-quote {
+/* ---------- Section lede (optional, under a section-head h2) ---------- */
+.section-lede {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--text-soft);
+  max-width: 56ch;
+  margin: 16px 0 0;
+}
+
+/* ---------- History ---------- */
+.history-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 68ch;
+  font-family: 'Newsreader', serif;
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+.history-body p { margin: 0; }
+
+/* ---------- Vision & Mission ---------- */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+.vm-label {
+  color: var(--brand-red-deep);
+  margin: 0 0 14px;
+  font-size: 12.5px;
+}
+.vm-text {
   font-family: 'Newsreader', serif;
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(24px, 2.6vw, 32px);
-  line-height: 1.4;
-  max-width: 30ch;
+  font-size: clamp(19px, 1.8vw, 23px);
+  line-height: 1.45;
   color: var(--text);
-  border-left: 3px solid var(--brand-red);
-  padding-left: 28px;
-  margin: 0 0 64px;
+  border-left: 3px solid var(--brand-blue);
+  padding-left: 24px;
+  margin: 0;
 }
+.vm-mission .vm-text { border-left-color: var(--brand-red); }
+
+/* ---------- Mission ---------- */
 .values {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -658,9 +700,10 @@ footer {
   font-size: 18px;
   color: #fff;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
 }
+.foot-icon { height: 26px; }
 .foot-brand small {
   font-family: 'Plex Mono', monospace;
   font-weight: 500;
@@ -697,8 +740,13 @@ footer {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 900px) {
+/* Nav links need more room than the main layout breakpoint alone
+   accounts for once the logo icon is in the mix -- hide them a good
+   deal earlier than the rest of the mobile layout kicks in. */
+@media (max-width: 1200px) {
   .navlinks { display: none; }
+}
+@media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-media { max-width: 340px; margin: 0 auto; }
   .hero-stat { left: 12px; bottom: -18px; }
@@ -707,6 +755,7 @@ footer {
   .stat-row div { flex: 0 0 auto; border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 14px; padding-bottom: 14px; }
   .stat-row div:first-child { border-top: none; padding-top: 0; }
   .section-head-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .vm-grid { grid-template-columns: 1fr; gap: 32px; }
   .motif-rings { display: none; }
   .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .programs-grid { grid-template-columns: 1fr; }
@@ -719,4 +768,7 @@ footer {
 @media (max-width: 480px) {
   .brand small { display: none; }
   .values { grid-template-columns: 1fr; }
+  .brand-icon { height: 24px; }
+  nav { gap: 12px; }
+  .navcta { padding: 9px 14px; font-size: 11px; }
 }
