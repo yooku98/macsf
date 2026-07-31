@@ -300,6 +300,7 @@ nav {
 .hero-media { position: relative; }
 .hero-media img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3.4;
   object-fit: cover;
   display: block;
@@ -575,7 +576,7 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   color: var(--text-faint);
   margin-bottom: 10px;
 }
-.program-card.flagship .program-code { color: rgba(255,255,255,0.7); }
+.program-card.flagship .program-code { color: #fff; }
 .program-card h3 { font-size: 24px; margin-bottom: 12px; }
 .program-card p {
   margin: 0;
@@ -593,6 +594,7 @@ section > .wrap > .section-head { margin-bottom: 52px; }
 .gallery-item { margin: 0; }
 .gallery-item img {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
