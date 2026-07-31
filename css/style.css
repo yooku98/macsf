@@ -201,7 +201,7 @@ nav {
   align-items: center;
   color: #fff;
   background:
-    linear-gradient(rgba(15,46,92,0.45), rgba(9,25,49,0.84)),
+    linear-gradient(rgba(8,18,36,0.72), rgba(6,13,26,0.88)),
     url('../public/mentorship-hall-overview.jpg') center / cover no-repeat;
 }
 .hero .wrap {
@@ -406,7 +406,6 @@ section.alt { background: var(--surface-alt); }
 }
 section > .wrap > .section-head { margin-bottom: 52px; }
 .section-head-row .section-head { margin-bottom: 0; }
-.section-head .eyebrow { color: var(--brand-red-deep); }
 .section-head h2 { font-size: clamp(30px, 3.4vw, 42px); }
 
 /* ---------- Section lede (optional, under a section-head h2) ---------- */
