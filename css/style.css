@@ -630,6 +630,24 @@ section > .wrap > .section-head { margin-bottom: 52px; }
   background: var(--surface-alt);
   border-top: 1px solid var(--border);
 }
+.involve-photo {
+  margin: 0 0 48px;
+}
+.involve-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.involve-photo figcaption {
+  margin-top: 14px;
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--text-soft);
+  text-align: center;
+}
 .involve-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
